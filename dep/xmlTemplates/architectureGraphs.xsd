@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:element name="verimagsdftool">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="architectureGraph" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence>
+			<xs:attribute name="type" type="xs:string" use="required"/>
+			<xs:attribute name="version" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="architectureGraph">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="processor" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="link" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="memory" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="processors" type="xs:string" use="required"/>
+			<xs:attribute name="clusters" type="xs:string" use="required"/>
+			<xs:attribute name="links" type="xs:string" use="required"/>
+			<xs:attribute name="memories" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="processor">
+		<xs:complexType>
+				<xs:attribute name="name" type="xs:string" use="required"/>
+				<xs:attribute name="type" type="xs:string"/>
+				<xs:attribute name="memory" type="xs:string"/>
+				<xs:attribute name="speed" type="xs:string"/>
+				<xs:attribute name="links" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="cluster">
+		<xs:complexType>
+				<xs:attribute name="name" type="xs:string" use="required"/>
+				<xs:attribute name="procsInCluster" type="xs:string"/>
+				<xs:attribute name="type" type="xs:string"/>
+				<xs:attribute name="memory" type="xs:string"/>
+				<xs:attribute name="speed" type="xs:string"/>
+				<xs:attribute name="links" type="xs:string"/>
+				<xs:attribute name="cluster" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="link">
+		<xs:complexType>
+				<xs:attribute name="name" type="xs:string" use="required"/>
+				<xs:attribute name="src" type="xs:string"/>
+				<xs:attribute name="srcPort" type="xs:string"/>
+				<xs:attribute name="dst" type="xs:string"/>
+				<xs:attribute name="dstPort" type="xs:string"/>
+				<xs:attribute name="delay" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="memory"> 
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="processor" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="cluster" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+				<xs:attribute name="name" type="xs:string" use="required"/>
+				<xs:attribute name="numProcessors" type="xs:string"/>
+				<xs:attribute name="size" type="xs:string"/>
+				<xs:attribute name="latency" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema> 

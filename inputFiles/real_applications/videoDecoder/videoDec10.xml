@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+	<applicationGraph name='VideDecoder'>
+		<sdf name="VideoDecoder" type="Videodecoder">
+			<actor name="Vld" type="vld">
+				<port name="p0" type="out" rate="40"/>
+				<port name="p1" type="out" rate="40"/>
+				<port name="p2" type="out" rate="100"/>
+			</actor>
+			<actor name="Fetch-L" type="fetch-l">
+				<port name="p0" type="in" rate="1"/>
+				<port name="p1" type="out" rate="1"/>
+			</actor>
+			<actor name="Idct-L" type="idct-l">
+				<port name="p0" type="in" rate="1"/>
+				<port name="p1" type="out" rate="1"/>
+			</actor>
+			<actor name="Motion-comp-L" type="motion-comp-l">
+				<port name="p0" type="in" rate="1"/>
+				<port name="p1" type="in" rate="1"/>
+				<port name="p2" type="out" rate="1"/>
+			</actor>
+
+			<actor name="Chr-Split" type="chr-split">
+				<port name="p0" type="in" rate="10"/>
+				<port name="p1" type="out" rate="8"/>
+				<port name="p2" type="out" rate="2"/>
+			</actor>
+			<actor name="Fetch-C" type="fetch-c">
+				<port name="p0" type="in" rate="2"/>
+				<port name="p1" type="out" rate="2"/>
+			</actor>
+			<actor name="Motion-comp-C" type="motion-comp-c">
+				<port name="p0" type="in" rate="2"/>
+				<port name="p1" type="in" rate="2"/>
+				<port name="p2" type="out" rate="2"/>
+			</actor>
+			<actor name="Idct-C" type="idct-c">
+				<port name="p0" type="in" rate="2"/>
+				<port name="p1" type="out" rate="2"/>
+			</actor>
+			<actor name="Upscale" type="upscale">
+				<port name="p0" type="in" rate="2"/>
+				<port name="p1" type="out" rate="8"/>
+			</actor>
+			<actor name="Chr-Join" type="chr-join">
+				<port name="p0" type="in" rate="8"/>
+				<port name="p1" type="out" rate="8"/>
+			</actor>
+			<actor name="Color" type="color">
+				<port name="p0" type="in" rate="40"/>
+				<port name="p1" type="in" rate="80"/>
+			</actor>
+
+			<channel name="Vld2Fetch-l" srcActor="Vld" srcPort="p0" dstActor="Fetch-L" dstPort="p0"/>      
+			<channel name="Vld2Idct-l" srcActor="Vld" srcPort="p1" dstActor="Idct-L" dstPort="p0"/>      
+			<channel name="Fetch-l2Mc-l" srcActor="Fetch-L" srcPort="p1" dstActor="Motion-comp-L" dstPort="p0"/>      
+			<channel name="Idct-l2Mc-l" srcActor="Idct-L" srcPort="p1" dstActor="Motion-comp-L" dstPort="p1"/>      
+			<channel name="Mc-l2Color" srcActor="Motion-comp-L" srcPort="p2" dstActor="Color" dstPort="p0"/>      
+			<channel name="Vld2Chr-Split" srcActor="Vld" srcPort="p2" dstActor="Chr-Split" dstPort="p0"/>      
+			<channel name="Chr-Split2Fetch-c" srcActor="Chr-Split" srcPort="p1" dstActor="Fetch-C" dstPort="p0"/>      
+			<channel name="Chr-Split2Idct-c" srcActor="Chr-Split" srcPort="p2" dstActor="Idct-C" dstPort="p0"/>      
+			<channel name="Fetch-c2Mc-c" srcActor="Fetch-C" srcPort="p1" dstActor="Motion-comp-C" dstPort="p0"/>      
+			<channel name="Idct-c2upscale" srcActor="Idct-C" srcPort="p1" dstActor="Upscale" dstPort="p0"/>      
+			<channel name="upscale2Motion-comp-C" srcActor="Upscale" srcPort="p1" dstActor="Motion-comp-C" dstPort="p1"/>      
+			<channel name="Mc-c2Chr-Join" srcActor="Motion-comp-C" srcPort="p2" dstActor="Chr-Join" dstPort="p0"/>      
+			<channel name="Chr-Join2Color" srcActor="Chr-Join" srcPort="p1" dstActor="Color" dstPort="p1"/>      
+
+		</sdf> 
+		<sdfProperties>
+			<actorProperties actor="Vld"><processor type="p1" default="true"><executionTime time="3000"/> </processor></actorProperties> 
+			<actorProperties actor="Fetch-L"><processor type="p1" default="true"><executionTime time="150"/> </processor></actorProperties> 
+			<actorProperties actor="Fetch-C"><processor type="p1" default="true"><executionTime time="300"/> </processor></actorProperties> 
+			<actorProperties actor="Idct-L"><processor type="p1" default="true"><executionTime time="130"/> </processor></actorProperties> 
+			<actorProperties actor="Idct-C"><processor type="p1" default="true"><executionTime time="260"/> </processor></actorProperties> 
+			<actorProperties actor="Motion-comp-L"><processor type="p1" default="true"><executionTime time="100"/> </processor></actorProperties> 
+			<actorProperties actor="Motion-comp-C"><processor type="p1" default="true"><executionTime time="200"/> </processor></actorProperties> 
+			<actorProperties actor="Upscale"><processor type="p1" default="true"><executionTime time="40"/> </processor></actorProperties> 
+			<actorProperties actor="Color"><processor type="p1" default="true"><executionTime time="6800"/> </processor></actorProperties> 
+			<actorProperties actor="Chr-Join"><processor type="p1" default="true"><executionTime time="40"/> </processor></actorProperties> 
+			<actorProperties actor="Chr-Split"><processor type="p1" default="true"><executionTime time="30"/> </processor></actorProperties> 
+
+			<channelProperties channel="Vld2Fetch-l"> <tokenSize sz="1"/> </channelProperties>
+			<channelProperties channel="Vld2Idct-l"> <tokenSize sz="1"/> </channelProperties>
+			<channelProperties channel="Fetch-l2Mc-l"> <tokenSize sz="1"/> </channelProperties>
+			<channelProperties channel="Idct-l2Mc-l"> <tokenSize sz="1"/> </channelProperties>
+			<channelProperties channel="Mc-l2Color"> <tokenSize sz="1"/> </channelProperties>
+			<channelProperties channel="Vld2Chr-Split"> <tokenSize sz="1"/> </channelProperties>
+			<channelProperties channel="Chr-Split2Fetch-c"> <tokenSize sz="1"/> </channelProperties>
+			<channelProperties channel="Chr-Split2Idct-c"> <tokenSize sz="1"/> </channelProperties>
+			<channelProperties channel="Fetch-c2Mc-c"> <tokenSize sz="1"/> </channelProperties>
+			<channelProperties channel="Idct-c2upscale"> <tokenSize sz="1"/> </channelProperties>
+			<channelProperties channel="upscale2Motion-comp-C"> <tokenSize sz="1"/> </channelProperties>
+			<channelProperties channel="Mc-c2Chr-Join"> <tokenSize sz="1"/> </channelProperties>
+			<channelProperties channel="Chr-Join2Color"> <tokenSize sz="1"/> </channelProperties>
+		</sdfProperties>
+	</applicationGraph>
+</sdf3>

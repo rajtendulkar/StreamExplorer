@@ -1,0 +1,29 @@
+<body>
+StreamExplorer is framework designed to experiment with SDF (synchronous dataflow) graphs.
+It also has support for task graphs. 
+It solves the mapping and scheduling problem by using SMT solver.
+It can also perform design-space exploration for mapping and scheduling, and many other problems.
+It is also possible to support other scheduling techniques. One such technique implemented is List Scheduling.
+We already have performed with experiments  with different hardware platforms such as Tilera TILE-64, Kalray MPPA-256.
+
+The structure of the StreamExplorer is as follows :
+<br/><br/><br/><br/><br/><br/>
+
+<img src="streamExplorer.png"/>
+
+<br/><br/><br/><br/><br/><br/>
+
+It consists of different modules and is tightly integrated with Z3 SMT solver.
+
+ <ul>
+  <li><b>Application models</b> : Builds a model of application graph with actors, channels, ports etc.</li>
+  <li><b>Platform</b> : Hardware model containing information about the hardware parameters</li>
+  <li><b>XML Parser</b> : Parses XML files and build application model or hardware model</li>
+  <li><b>Solver</b> : Number of solvers for different problems like scheduling, mapping, partitioning etc.</li>
+  <li><b>Output</b> : Generate Dot Graphs, Gantt charts, schedules etc.</li>
+  <li><b>Exploration</b> : Design space exploration for different problems</li>
+  <li><b>Design Flow</b> : A three-step approach for mapping and scheduling applications on distributed memory processors.</li>
+  <li><b>Run-time</b> : C++ code running on hardware platform to execute schedules produced by the StreamExplorer</li>  
+</ul> 
+
+</body>

@@ -1,0 +1,24 @@
+<verimagsdftool id="sdf" version="1.0"> 
+	<architectureGraph name="mesh4x4" memories="4" processors="4" clusters="0" links="4" dma="0"> 
+		<processor name="A" id="0" memory="1" speed="1" links="2"/>
+		<processor name="B" id="1" memory="1" speed="1" links="2"/>
+		<processor name="C" id="2" memory="1" speed="1" links="2"/>
+		<processor name="D" id="3" memory="1" speed="1" links="2"/>
+		<link name="A2B" id="0" src="A" srcPort="0" dst="B" dstPort="0" latency="1"/>      
+		<link name="B2C" id="1" src="B" srcPort="1" dst="C" dstPort="0" latency="1"/>      
+		<link name="C2D" id="2" src="C" srcPort="1" dst="D" dstPort="0" latency="1"/>      
+		<link name="D2A" id="3" src="D" srcPort="1" dst="A" dstPort="1" latency="1"/>      
+		<memory name="procA" id="0" numCProcessors="1" size="1024" latency="1" unit="MB">
+			<processor name="A"/>
+		</memory>
+		<memory name="procB" id="1" numCProcessors="1" size="1024" latency="1" unit="MB">      
+			<processor name="B"/>
+		</memory>
+		<memory name="procC" id="2" numCProcessors="1" size="1024" latency="1" unit="MB">      
+			<processor name="C"/>
+		</memory>
+		<memory name="procD" id="3" numCProcessors="1" size="1024" latency="1" unit="MB">      
+			<processor name="D"/>
+		</memory>
+	</architectureGraph>
+</verimagsdftool>

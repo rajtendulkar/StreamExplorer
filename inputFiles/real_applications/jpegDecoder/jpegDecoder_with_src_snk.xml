@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+	<applicationGraph name='jpegDecoder'>
+		<sdf name="jpegDecoder" type="jpegDecoder">
+			<actor name="SRC" type="SRC">
+				<port name="p0" type="out" rate="1"/>
+			</actor>
+			<actor name="VLD" type="VLD">
+				<port name="p0" type="in" rate="1"/>
+				<port name="p1" type="out" rate="12"/>
+			</actor>
+			<actor name="IQIDCT" type="IQIDCT">
+				<port name="p0" type="in" rate="1"/>
+				<port name="p1" type="out" rate="1"/>
+			</actor>
+			<actor name="COLOR" type="COLOR">
+				<port name="p0" type="in" rate="1"/>
+				<port name="p1" type="out" rate="1"/>
+			</actor>
+			<actor name="SNK" type="SNK">
+				<port name="p0" type="in" rate="12"/>
+			</actor>
+			<channel name="SRC2VLD" srcActor="SRC" srcPort="p0" dstActor="VLD" dstPort="p0"/>      
+			<channel name="VLD2IQIDCT" srcActor="VLD" srcPort="p1" dstActor="IQIDCT" dstPort="p0"/>
+			<channel name="IQIDCT2COLOR" srcActor="IQIDCT" srcPort="p1" dstActor="COLOR" dstPort="p0"/>
+			<channel name="COLOR2SNK" srcActor="COLOR" srcPort="p1" dstActor="SNK" dstPort="p0"/>
+		</sdf> 
+		<sdfProperties>
+			<actorProperties actor="SRC">
+				<processor type="Tilera" default="true"> <executionTime time="557621"/>	</processor>
+			</actorProperties>
+			<actorProperties actor="VLD">
+				<processor type="Tilera" default="true"> <executionTime time="840243"/>	</processor>
+			</actorProperties>
+			<actorProperties actor="IQIDCT">
+				<processor type="Tilera" default="true"> <executionTime time="89559"/> </processor>
+			</actorProperties>
+			<actorProperties actor="COLOR">
+				<processor type="Tilera" default="true"> <executionTime time="57291"/> </processor>
+			</actorProperties>
+			<actorProperties actor="SNK">
+				<processor type="Tilera" default="true"> <executionTime time="1037594"/> </processor>
+			</actorProperties>
+			<channelProperties channel="SRC2VLD"> <tokenSize sz="1"/> </channelProperties>
+			<channelProperties channel="VLD2IQIDCT"> <tokenSize sz="268"/> </channelProperties>
+			<channelProperties channel="IQIDCT2COLOR"> <tokenSize sz="76"/> </channelProperties>
+			<channelProperties channel="COLOR2SNK"> <tokenSize sz="1"/> </channelProperties>
+		</sdfProperties>
+	</applicationGraph>
+</sdf3>

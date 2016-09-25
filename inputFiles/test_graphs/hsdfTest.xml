@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name='TestGraph'>
+    <sdf name="example" type="Example">
+      <actor name="A" type="AType">
+        <port name="p0" type="out" rate="3"/>
+      </actor>
+      <actor name="B" type="BType">
+        <port name="p0" type="in" rate="1"/>
+        <port name="p1" type="out" rate="2"/>
+      </actor>
+      <actor name="C" type="CType">
+        <port name="p0" type="in" rate="4"/>
+      </actor>
+      <channel name="A2B" srcActor="A" srcPort="p0" dstActor="B" dstPort="p0"/>      
+      <channel name="B2C" srcActor="B" srcPort="p1" dstActor="C" dstPort="p0"/>      
+    </sdf> 
+	 <sdfProperties>
+      <actorProperties actor="A">
+        <processor type="p1" default="true">
+          <executionTime time="100"/>
+        </processor>
+      </actorProperties> 
+      <actorProperties actor="B">
+        <processor type="p1" default="true">
+          <executionTime time="200"/>
+        </processor>
+      </actorProperties> 
+      <actorProperties actor="C">
+        <processor type="p1" default="true">
+          <executionTime time="300"/>
+        </processor>
+	</actorProperties> 
+	<channelProperties channel="A2B"> 
+		<tokenSize sz="200"/> 
+	</channelProperties>
+	<channelProperties channel="B2C"> 
+		<tokenSize sz="100"/> 
+	</channelProperties>
+	 </sdfProperties>
+  </applicationGraph>
+</sdf3>

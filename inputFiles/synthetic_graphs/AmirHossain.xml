@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name='h263decoder'>
+    <sdf name="h263decoder" type="H263decoder">
+      <actor name="A" type="A0">
+        <port name="p0" type="out" rate="1"/>
+        <port name="p1" type="in" rate="1"/>
+      </actor>
+      <actor name="B" type="A1">
+        <port name="p0" type="in" rate="1"/>
+        <port name="p1" type="out" rate="1"/>
+		<port name="p2" type="in" rate="3"/>
+        <port name="p3" type="out" rate="3"/>
+      </actor>
+      <actor name="C" type="A2">
+        <port name="p0" type="in" rate="2"/>
+        <port name="p1" type="out" rate="2"/>
+		<port name="p2" type="in" rate="1"/>
+        <port name="p3" type="out" rate="1"/>
+      </actor>
+      <actor name="D" type="A3">
+        <port name="p0" type="in" rate="1"/>
+        <port name="p1" type="out" rate="1"/>
+      </actor>
+      <channel name="A2B" srcActor="A" srcPort="p0" dstActor="B" dstPort="p0"/>      
+      <channel name="B2A" srcActor="B" srcPort="p1" dstActor="A" dstPort="p1" initialTokens="1"/>
+      <channel name="B2C" srcActor="B" srcPort="p3" dstActor="C" dstPort="p0"/>
+      <channel name="C2B" srcActor="C" srcPort="p1" dstActor="B" dstPort="p2" initialTokens="5"/>
+      <channel name="C2D" srcActor="C" srcPort="p3" dstActor="D" dstPort="p0"/>
+      <channel name="D2C" srcActor="D" srcPort="p1" dstActor="C" dstPort="p2" initialTokens="1"/>
+    </sdf> 
+	 <sdfProperties>
+      <actorProperties actor="A">
+        <processor type="p1" default="true">
+          <executionTime time="2"/>
+        </processor>
+      </actorProperties> 
+      <actorProperties actor="B">
+        <processor type="p1" default="true">
+          <executionTime time="1"/>
+        </processor>
+      </actorProperties> 
+      <actorProperties actor="C">
+        <processor type="p1" default="true">
+          <executionTime time="3"/>
+        </processor>
+      </actorProperties> 
+      <actorProperties actor="D">
+        <processor type="p1" default="true">
+          <executionTime time="1"/>
+        </processor>
+      </actorProperties> 
+	 </sdfProperties>
+  </applicationGraph>
+</sdf3>

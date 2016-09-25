@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name='SymmetricGraph'>
+    <sdf name="Graph" type="GRAPH">
+      <actor name="A" type="A">
+        <port name="p0" type="out" rate="2"/>
+      </actor>
+      <actor name="B" type="B">
+        <port name="p0" type="in" rate="1"/>
+        <port name="p1" type="out" rate="2"/>
+        <port name="p2" type="out" rate="2"/>
+	  </actor>
+      <actor name="C" type="C">
+        <port name="p0" type="in" rate="1"/>
+        <port name="p1" type="out" rate="2"/>
+	  </actor>
+      <actor name="D" type="D">
+        <port name="p0" type="in" rate="1"/>
+        <port name="p1" type="out" rate="2"/>
+	  </actor>
+      <actor name="E" type="E">
+        <port name="p0" type="in" rate="1"/>
+        <port name="p1" type="out" rate="1"/>
+	  </actor>
+      <actor name="F" type="F">
+        <port name="p0" type="in" rate="1"/>
+        <port name="p1" type="out" rate="1"/>
+	  </actor>
+      <actor name="G" type="G">
+        <port name="p0" type="in" rate="4"/>
+        <port name="p1" type="in" rate="4"/>
+        <port name="p2" type="out" rate="1"/>
+	  </actor>
+      <actor name="H" type="H">
+        <port name="p0" type="in" rate="2"/>
+	  </actor>
+      <channel name="A2B" srcActor="A" srcPort="p0" dstActor="B" dstPort="p0"/>
+      <channel name="B2C" srcActor="B" srcPort="p1" dstActor="C" dstPort="p0"/>
+      <channel name="B2D" srcActor="B" srcPort="p2" dstActor="D" dstPort="p0"/>
+      <channel name="C2E" srcActor="C" srcPort="p1" dstActor="E" dstPort="p0"/>
+      <channel name="D2F" srcActor="D" srcPort="p1" dstActor="F" dstPort="p0"/>
+      <channel name="E2G" srcActor="E" srcPort="p1" dstActor="G" dstPort="p0"/>
+      <channel name="F2G" srcActor="F" srcPort="p1" dstActor="G" dstPort="p1"/>
+      <channel name="G2H" srcActor="G" srcPort="p2" dstActor="H" dstPort="p0"/>
+    </sdf> 
+	 <sdfProperties>
+      <actorProperties actor="A">
+        <processor type="p1" default="true">
+          <executionTime time="1"/>
+        </processor>
+      </actorProperties> 
+      <actorProperties actor="B">
+        <processor type="p1" default="true">
+          <executionTime time="2"/>
+        </processor>
+      </actorProperties> 
+      <actorProperties actor="C">
+        <processor type="p1" default="true">
+          <executionTime time="1"/>
+        </processor>
+      </actorProperties> 
+      <actorProperties actor="D">
+        <processor type="p1" default="true">
+          <executionTime time="1"/>
+        </processor>
+      </actorProperties> 
+      <actorProperties actor="E">
+        <processor type="p1" default="true">
+          <executionTime time="1"/>
+        </processor>
+      </actorProperties> 
+      <actorProperties actor="F">
+        <processor type="p1" default="true">
+          <executionTime time="1"/>
+        </processor>
+      </actorProperties> 
+      <actorProperties actor="G">
+        <processor type="p1" default="true">
+          <executionTime time="1"/>
+        </processor>
+      </actorProperties> 
+      <actorProperties actor="H">
+        <processor type="p1" default="true">
+          <executionTime time="1"/>
+        </processor>
+      </actorProperties> 
+	 </sdfProperties>
+  </applicationGraph>
+</sdf3>

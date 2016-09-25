@@ -1,0 +1,181 @@
+<verimagsdftool id="sdf" version="1.0"> 
+	<architectureGraph name="mesh8x8" processors="64" clusters="0" links="112" memories="0" dma="0"> 
+		<processor name="proc0"  id="0"  speed="1" links="2"/>
+		<processor name="proc1"  id="1"  speed="1" links="3"/>
+		<processor name="proc2"  id="2"  speed="1" links="3"/>
+		<processor name="proc3"  id="3"  speed="1" links="3"/>
+		<processor name="proc4"  id="4"  speed="1" links="3"/>
+		<processor name="proc5"  id="5"  speed="1" links="3"/>
+		<processor name="proc6"  id="6"  speed="1" links="3"/>
+		<processor name="proc7"  id="7"  speed="1" links="2"/>
+		<processor name="proc8"  id="8"  speed="1" links="3"/>
+		<processor name="proc9"  id="9"  speed="1" links="4"/>
+		<processor name="proc10" id="10" speed="1" links="4"/>
+		<processor name="proc11" id="11" speed="1" links="4"/>
+		<processor name="proc12" id="12" speed="1" links="4"/>
+		<processor name="proc13" id="13" speed="1" links="4"/>
+		<processor name="proc14" id="14" speed="1" links="4"/>
+		<processor name="proc15" id="15" speed="1" links="3"/>
+		<processor name="proc16" id="16" speed="1" links="3"/>
+		<processor name="proc17" id="17" speed="1" links="4"/>
+		<processor name="proc18" id="18" speed="1" links="4"/>
+		<processor name="proc19" id="19" speed="1" links="4"/>
+		<processor name="proc20" id="20" speed="1" links="4"/>
+		<processor name="proc21" id="21" speed="1" links="4"/>
+		<processor name="proc22" id="22" speed="1" links="4"/>
+		<processor name="proc23" id="23" speed="1" links="3"/>
+		<processor name="proc24" id="24" speed="1" links="3"/>
+		<processor name="proc25" id="25" speed="1" links="4"/>
+		<processor name="proc26" id="26" speed="1" links="4"/>
+		<processor name="proc27" id="27" speed="1" links="4"/>
+		<processor name="proc28" id="28" speed="1" links="4"/>
+		<processor name="proc29" id="29" speed="1" links="4"/>
+		<processor name="proc30" id="30" speed="1" links="4"/>
+		<processor name="proc31" id="31" speed="1" links="3"/>
+		<processor name="proc32" id="32" speed="1" links="3"/>
+		<processor name="proc33" id="33" speed="1" links="4"/>
+		<processor name="proc34" id="34" speed="1" links="4"/>
+		<processor name="proc35" id="35" speed="1" links="4"/>
+		<processor name="proc36" id="36" speed="1" links="4"/>
+		<processor name="proc37" id="37" speed="1" links="4"/>
+		<processor name="proc38" id="38" speed="1" links="4"/>
+		<processor name="proc39" id="39" speed="1" links="3"/>
+		<processor name="proc40" id="40" speed="1" links="3"/>
+		<processor name="proc41" id="41" speed="1" links="4"/>
+		<processor name="proc42" id="42" speed="1" links="4"/>
+		<processor name="proc43" id="43" speed="1" links="4"/>
+		<processor name="proc44" id="44" speed="1" links="4"/>
+		<processor name="proc45" id="45" speed="1" links="4"/>
+		<processor name="proc46" id="46" speed="1" links="4"/>
+		<processor name="proc47" id="47" speed="1" links="3"/>
+		<processor name="proc48" id="48" speed="1" links="3"/>
+		<processor name="proc49" id="49" speed="1" links="4"/>
+		<processor name="proc50" id="50" speed="1" links="4"/>
+		<processor name="proc51" id="51" speed="1" links="4"/>
+		<processor name="proc52" id="52" speed="1" links="4"/>
+		<processor name="proc53" id="53" speed="1" links="4"/>
+		<processor name="proc54" id="54" speed="1" links="4"/>
+		<processor name="proc55" id="55" speed="1" links="3"/>
+		<processor name="proc56" id="56" speed="1" links="2"/>
+		<processor name="proc57" id="57" speed="1" links="3"/>
+		<processor name="proc58" id="58" speed="1" links="3"/>
+		<processor name="proc59" id="59" speed="1" links="3"/>
+		<processor name="proc60" id="60" speed="1" links="3"/>
+		<processor name="proc61" id="61" speed="1" links="3"/>
+		<processor name="proc62" id="62" speed="1" links="3"/>
+		<processor name="proc63" id="63" speed="1" links="2"/>
+
+		<link name="proc0toproc1"   id="0"   src="proc0"  srcPort="0" dst="proc1"  dstPort="2" latency="1"/>
+		<link name="proc0toproc8"   id="1"   src="proc0"  srcPort="1" dst="proc8"  dstPort="2" latency="1"/>
+		<link name="proc1toproc2"   id="2"   src="proc1"  srcPort="0" dst="proc2"  dstPort="2" latency="1"/>
+		<link name="proc1toproc9"   id="3"   src="proc1"  srcPort="1" dst="proc9"  dstPort="2" latency="1"/>
+		<link name="proc2toproc3"   id="4"   src="proc2"  srcPort="0" dst="proc3"  dstPort="2" latency="1"/>
+		<link name="proc2toproc10"  id="5"   src="proc2"  srcPort="1" dst="proc10" dstPort="2" latency="1"/>
+		<link name="proc3toproc4"   id="6"   src="proc3"  srcPort="0" dst="proc4"  dstPort="2" latency="1"/>
+		<link name="proc3toproc11"  id="7"   src="proc3"  srcPort="1" dst="proc11" dstPort="2" latency="1"/>
+		<link name="proc4toproc5"   id="8"   src="proc4"  srcPort="0" dst="proc5"  dstPort="2" latency="1"/>
+		<link name="proc4toproc12"  id="9"   src="proc4"  srcPort="1" dst="proc12" dstPort="2" latency="1"/>
+		<link name="proc5toproc6"   id="10"  src="proc5"  srcPort="0" dst="proc6"  dstPort="2" latency="1"/>
+		<link name="proc5toproc13"  id="11"  src="proc5"  srcPort="1" dst="proc13" dstPort="2" latency="1"/>
+		<link name="proc6toproc7"   id="12"  src="proc6"  srcPort="0" dst="proc7"  dstPort="1" latency="1"/>
+		<link name="proc6toproc14"  id="13"  src="proc6"  srcPort="1" dst="proc14" dstPort="2" latency="1"/>
+		<link name="proc7toproc15"  id="14"  src="proc7"  srcPort="0" dst="proc15" dstPort="1" latency="1"/>
+		<link name="proc8toproc9"   id="15"  src="proc8"  srcPort="0" dst="proc9"  dstPort="3" latency="1"/>
+		<link name="proc8toproc16"  id="16"  src="proc8"  srcPort="1" dst="proc16" dstPort="2" latency="1"/>
+		<link name="proc9toproc10"  id="17"  src="proc9"  srcPort="0" dst="proc10" dstPort="3" latency="1"/>
+		<link name="proc9toproc17"  id="18"  src="proc9"  srcPort="1" dst="proc17" dstPort="2" latency="1"/>
+		<link name="proc10toproc11" id="19"  src="proc10" srcPort="0" dst="proc11" dstPort="3" latency="1"/>
+		<link name="proc10toproc18" id="20"  src="proc10" srcPort="1" dst="proc18" dstPort="2" latency="1"/>
+		<link name="proc11toproc12" id="21"  src="proc11" srcPort="0" dst="proc12" dstPort="3" latency="1"/>
+		<link name="proc11toproc19" id="22"  src="proc11" srcPort="1" dst="proc19" dstPort="2" latency="1"/>
+		<link name="proc12toproc13" id="23"  src="proc12" srcPort="0" dst="proc13" dstPort="3" latency="1"/>
+		<link name="proc12toproc20" id="24"  src="proc12" srcPort="1" dst="proc20" dstPort="2" latency="1"/>
+		<link name="proc13toproc14" id="25"  src="proc13" srcPort="0" dst="proc14" dstPort="3" latency="1"/>
+		<link name="proc13toproc21" id="26"  src="proc13" srcPort="1" dst="proc21" dstPort="2" latency="1"/>
+		<link name="proc14toproc15" id="27"  src="proc14" srcPort="0" dst="proc15" dstPort="2" latency="1"/>
+		<link name="proc14toproc22" id="28"  src="proc14" srcPort="1" dst="proc22" dstPort="2" latency="1"/>
+		<link name="proc15toproc23" id="29"  src="proc15" srcPort="0" dst="proc23" dstPort="1" latency="1"/>
+		<link name="proc16toproc17" id="30"  src="proc16" srcPort="0" dst="proc17" dstPort="3" latency="1"/>
+		<link name="proc16toproc24" id="31"  src="proc16" srcPort="1" dst="proc24" dstPort="2" latency="1"/>
+		<link name="proc17toproc18" id="32"  src="proc17" srcPort="0" dst="proc18" dstPort="3" latency="1"/>
+		<link name="proc17toproc25" id="33"  src="proc17" srcPort="1" dst="proc25" dstPort="2" latency="1"/>
+		<link name="proc18toproc19" id="34"  src="proc18" srcPort="0" dst="proc19" dstPort="3" latency="1"/>
+		<link name="proc18toproc26" id="35"  src="proc18" srcPort="1" dst="proc26" dstPort="2" latency="1"/>
+		<link name="proc19toproc20" id="36"  src="proc19" srcPort="0" dst="proc20" dstPort="3" latency="1"/>
+		<link name="proc19toproc27" id="37"  src="proc19" srcPort="1" dst="proc27" dstPort="2" latency="1"/>
+		<link name="proc20toproc21" id="38"  src="proc20" srcPort="0" dst="proc21" dstPort="3" latency="1"/>
+		<link name="proc20toproc28" id="39"  src="proc20" srcPort="1" dst="proc28" dstPort="2" latency="1"/>
+		<link name="proc21toproc22" id="40"  src="proc21" srcPort="0" dst="proc22" dstPort="3" latency="1"/>
+		<link name="proc21toproc29" id="41"  src="proc21" srcPort="1" dst="proc29" dstPort="2" latency="1"/>
+		<link name="proc22toproc23" id="42"  src="proc22" srcPort="0" dst="proc23" dstPort="2" latency="1"/>
+		<link name="proc22toproc30" id="43"  src="proc22" srcPort="1" dst="proc30" dstPort="2" latency="1"/>
+		<link name="proc23toproc31" id="44"  src="proc23" srcPort="0" dst="proc31" dstPort="1" latency="1"/>
+		<link name="proc24toproc25" id="45"  src="proc24" srcPort="0" dst="proc25" dstPort="3" latency="1"/>
+		<link name="proc24toproc32" id="46"  src="proc24" srcPort="1" dst="proc32" dstPort="2" latency="1"/>
+		<link name="proc25toproc26" id="47"  src="proc25" srcPort="0" dst="proc26" dstPort="3" latency="1"/>
+		<link name="proc25toproc33" id="48"  src="proc25" srcPort="1" dst="proc33" dstPort="2" latency="1"/>
+		<link name="proc26toproc27" id="49"  src="proc26" srcPort="0" dst="proc27" dstPort="3" latency="1"/>
+		<link name="proc26toproc34" id="50"  src="proc26" srcPort="1" dst="proc34" dstPort="2" latency="1"/>
+		<link name="proc27toproc28" id="51"  src="proc27" srcPort="0" dst="proc28" dstPort="3" latency="1"/>
+		<link name="proc27toproc35" id="52"  src="proc27" srcPort="1" dst="proc35" dstPort="2" latency="1"/>
+		<link name="proc28toproc29" id="53"  src="proc28" srcPort="0" dst="proc29" dstPort="3" latency="1"/>
+		<link name="proc28toproc36" id="54"  src="proc28" srcPort="1" dst="proc36" dstPort="2" latency="1"/>
+		<link name="proc29toproc30" id="55"  src="proc29" srcPort="0" dst="proc30" dstPort="3" latency="1"/>
+		<link name="proc29toproc37" id="56"  src="proc29" srcPort="1" dst="proc37" dstPort="2" latency="1"/>
+		<link name="proc30toproc31" id="57"  src="proc30" srcPort="0" dst="proc31" dstPort="2" latency="1"/>
+		<link name="proc30toproc38" id="58"  src="proc30" srcPort="1" dst="proc38" dstPort="2" latency="1"/>
+		<link name="proc31toproc39" id="59"  src="proc31" srcPort="0" dst="proc39" dstPort="1" latency="1"/>
+		<link name="proc32toproc33" id="60"  src="proc32" srcPort="0" dst="proc33" dstPort="3" latency="1"/>
+		<link name="proc32toproc40" id="61"  src="proc32" srcPort="1" dst="proc40" dstPort="2" latency="1"/>
+		<link name="proc33toproc34" id="62"  src="proc33" srcPort="0" dst="proc34" dstPort="3" latency="1"/>
+		<link name="proc33toproc41" id="63"  src="proc33" srcPort="1" dst="proc41" dstPort="2" latency="1"/>
+		<link name="proc34toproc35" id="64"  src="proc34" srcPort="0" dst="proc35" dstPort="3" latency="1"/>
+		<link name="proc34toproc42" id="65"  src="proc34" srcPort="1" dst="proc42" dstPort="2" latency="1"/>
+		<link name="proc35toproc36" id="66"  src="proc35" srcPort="0" dst="proc36" dstPort="3" latency="1"/>
+		<link name="proc35toproc43" id="67"  src="proc35" srcPort="1" dst="proc43" dstPort="2" latency="1"/>
+		<link name="proc36toproc37" id="68"  src="proc36" srcPort="0" dst="proc37" dstPort="3" latency="1"/>
+		<link name="proc36toproc44" id="69"  src="proc36" srcPort="1" dst="proc44" dstPort="2" latency="1"/>
+		<link name="proc37toproc38" id="70"  src="proc37" srcPort="0" dst="proc38" dstPort="3" latency="1"/>
+		<link name="proc37toproc45" id="71"  src="proc37" srcPort="1" dst="proc45" dstPort="2" latency="1"/>
+		<link name="proc38toproc39" id="72"  src="proc38" srcPort="0" dst="proc39" dstPort="2" latency="1"/>
+		<link name="proc38toproc46" id="73"  src="proc38" srcPort="1" dst="proc46" dstPort="2" latency="1"/>
+		<link name="proc39toproc47" id="74"  src="proc39" srcPort="0" dst="proc47" dstPort="1" latency="1"/>
+		<link name="proc40toproc41" id="75"  src="proc40" srcPort="0" dst="proc41" dstPort="3" latency="1"/>
+		<link name="proc40toproc48" id="76"  src="proc40" srcPort="1" dst="proc48" dstPort="2" latency="1"/>
+		<link name="proc41toproc42" id="77"  src="proc41" srcPort="0" dst="proc42" dstPort="3" latency="1"/>
+		<link name="proc41toproc49" id="78"  src="proc41" srcPort="1" dst="proc49" dstPort="2" latency="1"/>
+		<link name="proc42toproc43" id="79"  src="proc42" srcPort="0" dst="proc43" dstPort="3" latency="1"/>
+		<link name="proc42toproc50" id="80"  src="proc42" srcPort="1" dst="proc50" dstPort="2" latency="1"/>
+		<link name="proc43toproc44" id="81"  src="proc43" srcPort="0" dst="proc44" dstPort="3" latency="1"/>
+		<link name="proc43toproc51" id="82"  src="proc43" srcPort="1" dst="proc51" dstPort="2" latency="1"/>
+		<link name="proc44toproc45" id="83"  src="proc44" srcPort="0" dst="proc45" dstPort="3" latency="1"/>
+		<link name="proc44toproc52" id="84"  src="proc44" srcPort="1" dst="proc52" dstPort="2" latency="1"/>
+		<link name="proc45toproc46" id="85"  src="proc45" srcPort="0" dst="proc46" dstPort="3" latency="1"/>
+		<link name="proc45toproc53" id="86"  src="proc45" srcPort="1" dst="proc53" dstPort="2" latency="1"/>
+		<link name="proc46toproc47" id="87"  src="proc46" srcPort="0" dst="proc47" dstPort="2" latency="1"/>
+		<link name="proc46toproc54" id="88"  src="proc46" srcPort="1" dst="proc54" dstPort="2" latency="1"/>
+		<link name="proc47toproc55" id="89"  src="proc47" srcPort="0" dst="proc55" dstPort="1" latency="1"/>
+		<link name="proc48toproc49" id="90"  src="proc48" srcPort="0" dst="proc49" dstPort="3" latency="1"/>
+		<link name="proc48toproc56" id="91"  src="proc48" srcPort="1" dst="proc56" dstPort="1" latency="1"/>
+		<link name="proc49toproc50" id="92"  src="proc49" srcPort="0" dst="proc50" dstPort="3" latency="1"/>
+		<link name="proc49toproc57" id="93"  src="proc49" srcPort="1" dst="proc57" dstPort="1" latency="1"/>
+		<link name="proc50toproc51" id="94"  src="proc50" srcPort="0" dst="proc51" dstPort="3" latency="1"/>
+		<link name="proc50toproc58" id="95"  src="proc50" srcPort="1" dst="proc58" dstPort="1" latency="1"/>
+		<link name="proc51toproc52" id="96"  src="proc51" srcPort="0" dst="proc52" dstPort="3" latency="1"/>
+		<link name="proc51toproc59" id="97"  src="proc51" srcPort="1" dst="proc59" dstPort="1" latency="1"/>
+		<link name="proc52toproc53" id="98"  src="proc52" srcPort="0" dst="proc53" dstPort="3" latency="1"/>
+		<link name="proc52toproc60" id="99"  src="proc52" srcPort="1" dst="proc60" dstPort="1" latency="1"/>
+		<link name="proc53toproc54" id="100" src="proc53" srcPort="0" dst="proc54" dstPort="3" latency="1"/>
+		<link name="proc53toproc61" id="101" src="proc53" srcPort="1" dst="proc61" dstPort="1" latency="1"/>
+		<link name="proc54toproc55" id="102" src="proc54" srcPort="0" dst="proc55" dstPort="2" latency="1"/>
+		<link name="proc54toproc62" id="103" src="proc54" srcPort="1" dst="proc62" dstPort="1" latency="1"/>
+		<link name="proc55toproc63" id="104" src="proc55" srcPort="0" dst="proc63" dstPort="0" latency="1"/>
+		<link name="proc56toproc57" id="105" src="proc56" srcPort="0" dst="proc57" dstPort="2" latency="1"/>
+		<link name="proc57toproc58" id="106" src="proc57" srcPort="0" dst="proc58" dstPort="2" latency="1"/>
+		<link name="proc58toproc59" id="107" src="proc58" srcPort="0" dst="proc59" dstPort="2" latency="1"/>
+		<link name="proc59toproc60" id="108" src="proc59" srcPort="0" dst="proc60" dstPort="2" latency="1"/>
+		<link name="proc60toproc61" id="109" src="proc60" srcPort="0" dst="proc61" dstPort="2" latency="1"/>
+		<link name="proc61toproc62" id="110" src="proc61" srcPort="0" dst="proc62" dstPort="2" latency="1"/>
+		<link name="proc62toproc63" id="111" src="proc62" srcPort="0" dst="proc63" dstPort="1" latency="1"/>
+	</architectureGraph>
+</verimagsdftool>

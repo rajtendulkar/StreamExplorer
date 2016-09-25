@@ -1,0 +1,4 @@
+digraph G {
+rankdir=LR;
+"prod" -> "cons"[minlen=2,headlabel="5",taillabel="5*p*",labeldistance=1, color=red, fontcolor=blue]
+}

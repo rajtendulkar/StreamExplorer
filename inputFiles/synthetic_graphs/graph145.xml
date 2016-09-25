@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+	<applicationGraph name='h263decoder'>
+		<sdf name="graph1" type="graph1">
+			<actor name="A" type="A">
+				<port name="p0" type="out" rate="145"/>
+			</actor>
+			<actor name="B" type="B">
+				<port name="p0" type="in" rate="1"/>
+				<port name="p1" type="out" rate="1"/>
+			</actor>
+			<actor name="C" type="C">
+				<port name="p0" type="in" rate="145"/>
+			</actor>
+			<channel name="A2B" srcActor="A" srcPort="p0" dstActor="B" dstPort="p0"/>      
+			<channel name="B2C" srcActor="B" srcPort="p1" dstActor="C" dstPort="p0"/>      
+		</sdf> 
+		<sdfProperties>
+			<channelProperties channel="A2B"><tokenSize sz="10"/></channelProperties>
+			<channelProperties channel="B2C"><tokenSize sz="10"/></channelProperties>
+			<actorProperties actor="A">
+				<processor type="p1" default="true">
+					<executionTime time="100"/>
+				</processor>
+			</actorProperties> 
+			<actorProperties actor="B">
+				<processor type="p1" default="true">
+					<executionTime time="100"/>
+				</processor>
+			</actorProperties>
+			<actorProperties actor="C">
+				<processor type="p1" default="true">
+					<executionTime time="100"/>
+				</processor>
+			</actorProperties>
+		</sdfProperties>
+	</applicationGraph>
+</sdf3>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name='h263decoder'>
+    <sdf name="h263decoder" type="H263decoder">
+      <actor name="A" type="A0">
+        <port name="p0" type="out" rate="1"/>
+        <port name="p1" type="out" rate="2"/>
+      </actor>
+      <actor name="B" type="A1">
+        <port name="p0" type="in" rate="3"/>
+        <port name="p1" type="out" rate="2"/>
+        <port name="p2" type="out" rate="1"/>
+      </actor>
+      <actor name="C" type="A2">
+        <port name="p0" type="in" rate="3"/>
+	<port name="p1" type="in" rate="1"/>
+        <port name="p2" type="out" rate="5"/>
+      </actor>
+      <actor name="D" type="A3">
+        <port name="p0" type="in" rate="4"/>
+        <port name="p1" type="in" rate="2"/>
+      </actor>
+      <actor name="E" type="A4">
+        <port name="p0" type="in" rate="2"/>
+        <port name="p1" type="out" rate="10"/>
+      </actor>
+      <channel name="A2B" srcActor="A" srcPort="p0" dstActor="B" dstPort="p0"/>
+      <channel name="A2C" srcActor="A" srcPort="p1" dstActor="C" dstPort="p0"/>
+      <channel name="B2C" srcActor="B" srcPort="p1" dstActor="C" dstPort="p1"/>
+      <channel name="B2E" srcActor="B" srcPort="p2" dstActor="E" dstPort="p0"/>
+      <channel name="C2D" srcActor="C" srcPort="p2" dstActor="D" dstPort="p0"/>
+      <channel name="E2D" srcActor="E" srcPort="p1" dstActor="D" dstPort="p1"/>
+    </sdf>    
+  </applicationGraph>
+</sdf3>

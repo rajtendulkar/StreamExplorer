@@ -1,0 +1,33 @@
+/*********************************************************
+*														 *
+*					   --------- 						 *
+*					   |VERIMAG|						 *
+*					   ---------						 *
+*														 *
+*														 *
+*														 *
+**********************************************************/
+
+
+
+/********************************************************
+					REVISION NUMBER 
+    
+	                    2.0.0
+ ********************************************************/
+
+ ChangeLog
+
+ 2.0.0
+   - Added documentation to the code. Re-organized all the branches
+     names of classes, methods etc. The java libraries are now from
+	 a stable release, so we can use them safely.
+
+ 1.0.0
+ 	
+	- First Version of the java integrated Z3 created.
+	  The java libraries used is from the un-released branch of Z3. 
+	  Once we have a Z3 stable branch with Java release, we will replace 
+	  that into our development branch.
+
+

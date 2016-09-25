@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+  <applicationGraph name='h263decoder'>
+    <sdf name="h263decoder" type="H263decoder">
+      <actor name="1" type="A0">
+        <port name="p0" type="in" rate="1"/>
+        <port name="p1" type="out" rate="1"/>
+        <port name="p2" type="out" rate="1"/>
+      </actor>
+      <actor name="2" type="A1">
+        <port name="p0" type="in" rate="1"/>
+        <port name="p1" type="in" rate="1"/>
+	<port name="p2" type="out" rate="1"/>
+        <port name="p3" type="out" rate="1"/>
+	<port name="p4" type="out" rate="1"/>
+      </actor>
+      <actor name="3" type="A2">
+        <port name="p0" type="in" rate="1"/>
+        <port name="p1" type="in" rate="1"/>
+	<port name="p2" type="in" rate="1"/>
+        <port name="p3" type="out" rate="1"/>
+        <port name="p4" type="in" rate="1"/>
+      </actor>
+      <actor name="4" type="A3">
+        <port name="p0" type="in" rate="1"/>
+	<port name="p1" type="in" rate="1"/>
+        <port name="p2" type="out" rate="1"/>
+	<port name="p3" type="out" rate="1"/>
+      </actor>
+      <actor name="5" type="A4">
+        <port name="p0" type="in" rate="1"/>
+        <port name="p1" type="in" rate="1"/>
+	<port name="p2" type="out" rate="1"/>
+	<port name="p3" type="out" rate="1"/>
+      </actor>
+      <actor name="6" type="A5">
+        <port name="p0" type="out" rate="1"/>        
+      </actor>
+      <channel name="1to2" srcActor="1" srcPort="p1" dstActor="2" dstPort="p0"/>
+      <channel name="1to4" srcActor="1" srcPort="p2" dstActor="4" dstPort="p0"/>      
+      <channel name="2to4" srcActor="2" srcPort="p3" dstActor="4" dstPort="p1"/>
+      <channel name="2to5" srcActor="2" srcPort="p4" dstActor="5" dstPort="p0"/>
+      <channel name="3to2" srcActor="3" srcPort="p3" dstActor="2" dstPort="p1"/>
+      <channel name="4to5" srcActor="4" srcPort="p3" dstActor="5" dstPort="p1"/>
+      <channel name="6to3" srcActor="6" srcPort="p0" dstActor="3" dstPort="p4"/>
+    </sdf> 	
+  </applicationGraph>
+</sdf3>

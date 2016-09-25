@@ -1,0 +1,93 @@
+<verimagsdftool id="sdf" version="1.0"> 
+	<architectureGraph name="mesh16x16" processors="16" clusters="0" links="24" memories="16" dma="0"> 
+		<processor name="proc0" id="0" memory="1" speed="1" links="2"/>
+		<processor name="proc1" id="1" memory="1" speed="1" links="3"/>
+		<processor name="proc2" id="2" memory="1" speed="1" links="3"/>
+		<processor name="proc3" id="3" memory="1" speed="1" links="2"/>
+		<processor name="proc4" id="4" memory="1" speed="1" links="3"/>
+		<processor name="proc5" id="5" memory="1" speed="1" links="4"/>
+		<processor name="proc6" id="6" memory="1" speed="1" links="4"/>
+		<processor name="proc7" id="7" memory="1" speed="1" links="3"/>
+		<processor name="proc8" id="8" memory="1" speed="1" links="3"/>
+		<processor name="proc9" id="9" memory="1" speed="1" links="4"/>
+		<processor name="proc10" id="10" memory="1" speed="1" links="4"/>
+		<processor name="proc11" id="11" memory="1" speed="1" links="3"/>
+		<processor name="proc12" id="12" memory="1" speed="1" links="2"/>
+		<processor name="proc13" id="13" memory="1" speed="1" links="3"/>
+		<processor name="proc14" id="14" memory="1" speed="1" links="3"/>
+		<processor name="proc15" id="15" memory="1" speed="1" links="2"/>
+		<link name="proc0toproc1" id="0" src="proc0" srcPort="0" dst="proc1" dstPort="0" latency="1"/>      
+		<link name="proc0toproc4" id="1" src="proc0" srcPort="1" dst="proc4" dstPort="0" latency="1"/>      
+		<link name="proc1toproc2" id="2" src="proc1" srcPort="2" dst="proc2" dstPort="0" latency="1"/>      
+		<link name="proc1toproc5" id="3" src="proc1" srcPort="1" dst="proc5" dstPort="0" latency="1"/>      
+		<link name="proc2toproc3" id="4" src="proc2" srcPort="2" dst="proc3" dstPort="0" latency="1"/>      
+		<link name="proc2toproc6" id="5" src="proc2" srcPort="1" dst="proc6" dstPort="0" latency="1"/>      
+		<link name="proc3toproc7" id="6" src="proc3" srcPort="1" dst="proc7" dstPort="0" latency="1"/>      
+		<link name="proc4toproc5" id="7" src="proc4" srcPort="1" dst="proc5" dstPort="1" latency="1"/>      
+		<link name="proc4toproc8" id="8" src="proc4" srcPort="2" dst="proc8" dstPort="0" latency="1"/>      
+		<link name="proc5toproc6" id="9" src="proc5" srcPort="2" dst="proc6" dstPort="1" latency="1"/>      
+		<link name="proc5toproc9" id="10" src="proc5" srcPort="3" dst="proc9" dstPort="0" latency="1"/>      
+		<link name="proc6toproc7" id="11" src="proc6" srcPort="2" dst="proc7" dstPort="1" latency="1"/>      
+		<link name="proc6toproc10" id="12" src="proc6" srcPort="3" dst="proc10" dstPort="0" latency="1"/>      
+		<link name="proc7toproc11" id="13" src="proc7" srcPort="2" dst="proc11" dstPort="0" latency="1"/>      
+		<link name="proc8toproc9" id="14" src="proc8" srcPort="1" dst="proc9" dstPort="1" latency="1"/>      
+		<link name="proc8toproc12" id="15" src="proc8" srcPort="2" dst="proc12" dstPort="0" latency="1"/>      
+		<link name="proc9toproc10" id="16" src="proc9" srcPort="2" dst="proc10" dstPort="1" latency="1"/>      
+		<link name="proc9toproc13" id="17" src="proc9" srcPort="3" dst="proc13" dstPort="1" latency="1"/>      
+		<link name="proc10toproc11" id="18" src="proc10" srcPort="2" dst="proc11" dstPort="1" latency="1"/>      
+		<link name="proc10toproc14" id="19" src="proc10" srcPort="3" dst="proc14" dstPort="1" latency="1"/>      
+		<link name="proc11toproc15" id="20" src="proc11" srcPort="2" dst="proc15" dstPort="0" latency="1"/>      
+		<link name="proc12toproc13" id="21" src="proc12" srcPort="1" dst="proc13" dstPort="0" latency="1"/>      
+		<link name="proc13toproc14" id="22" src="proc13" srcPort="2" dst="proc14" dstPort="0" latency="1"/>      
+		<link name="proc14toproc15" id="23" src="proc14" srcPort="2" dst="proc15" dstPort="1" latency="1"/>      
+		
+		<memory name="mem0" id="0" numCProcessors="1" size="1024" latency="1" unit="MB">
+			<processor name="proc0"/>
+		</memory>
+		<memory name="mem1" id="1" numCProcessors="1" size="1024" latency="1" unit="MB">      
+			<processor name="proc1"/>
+		</memory>
+		<memory name="mem2" id="2" numCProcessors="1" size="1024" latency="1" unit="MB">      
+			<processor name="proc2"/>
+		</memory>
+		<memory name="mem3" id="3" numCProcessors="1" size="1024" latency="1" unit="MB">      
+			<processor name="proc3"/>
+		</memory>
+		<memory name="mem4" id="4" numCProcessors="1" size="1024" latency="1" unit="MB">
+			<processor name="proc4"/>
+		</memory>
+		<memory name="mem5" id="5" numCProcessors="1" size="1024" latency="1" unit="MB">
+			<processor name="proc5"/>
+		</memory>
+		<memory name="mem6" id="6" numCProcessors="1" size="1024" latency="1" unit="MB">
+			<processor name="proc6"/>
+		</memory>
+		<memory name="mem7" id="7" numCProcessors="1" size="1024" latency="1" unit="MB">
+			<processor name="proc7"/>
+		</memory>
+		<memory name="mem8" id="8" numCProcessors="1" size="1024" latency="1" unit="MB">
+			<processor name="proc8"/>
+		</memory>
+		<memory name="mem9" id="9" numCProcessors="1" size="1024" latency="1" unit="MB">
+			<processor name="proc9"/>
+		</memory>
+		<memory name="mem10" id="10" numCProcessors="1" size="1024" latency="1" unit="MB">
+			<processor name="proc10"/>
+		</memory>
+		<memory name="mem11" id="11" numCProcessors="1" size="1024" latency="1" unit="MB">
+			<processor name="proc11"/>
+		</memory>
+		<memory name="mem12" id="12" numCProcessors="1" size="1024" latency="1" unit="MB">
+			<processor name="proc12"/>
+		</memory>
+		<memory name="mem13" id="13" numCProcessors="1" size="1024" latency="1" unit="MB">
+			<processor name="proc13"/>
+		</memory>
+		<memory name="mem14" id="14" numCProcessors="1" size="1024" latency="1" unit="MB">
+			<processor name="proc14"/>
+		</memory>
+		<memory name="mem15" id="15" numCProcessors="1" size="1024" latency="1" unit="MB">
+			<processor name="proc15"/>
+		</memory>
+	</architectureGraph>
+</verimagsdftool>

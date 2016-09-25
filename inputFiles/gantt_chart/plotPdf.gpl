@@ -1,0 +1,2 @@
+set terminal pdfcairo size 12in,6in
+set output "output.pdf"

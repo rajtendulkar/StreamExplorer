@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf3 type="sdf" version="1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://www.es.ele.tue.nl/sdf3/xsd/sdf3-sdf.xsd">
+	<applicationGraph name='jpegDecoder'>
+		<sdf name="jpegDecoder" type="jpegDecoder">
+			<actor name="VLD" type="VLD">
+				<port name="p0" type="out" rate="12"/>
+			</actor>
+			<actor name="IQ" type="IQ">
+				<port name="p0" type="in" rate="1"/>
+				<port name="p1" type="out" rate="1"/>
+			</actor>
+			<actor name="COL" type="COL">
+				<port name="p0" type="in" rate="1"/>
+			</actor>
+			<channel name="VLD2IQ" srcActor="VLD" srcPort="p0" dstActor="IQ" dstPort="p0"/>
+			<channel name="IQ2COL" srcActor="IQ" srcPort="p1" dstActor="COL" dstPort="p0"/>
+		</sdf> 
+		<sdfProperties>
+			<actorProperties actor="VLD">
+				<processor type="Tilera" default="true"> <executionTime time="173272"/>	</processor>
+			</actorProperties>
+			<actorProperties actor="IQ">
+				<processor type="Tilera" default="true"> <executionTime time="13097"/> </processor>
+			</actorProperties>
+			<actorProperties actor="COL">
+				<processor type="Tilera" default="true"> <executionTime time="8882"/> </processor>
+			</actorProperties>
+			<channelProperties channel="VLD2IQ"> <tokenSize sz="268"/> </channelProperties>
+			<channelProperties channel="IQ2COL"> <tokenSize sz="76"/> </channelProperties>
+		</sdfProperties>
+	</applicationGraph>
+</sdf3>
