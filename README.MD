@@ -1,4 +1,8 @@
 StreamExplorer is a framework for solving mapping and scheduling problem for dataflow graph.
+Please refer to the following documents for more details -
+
+https://hal.inria.fr/tel-01087271/document
+
 It can be built using Eclipse or from the command line.
 
 Check if your machine is 32-bit or 64-bit.
